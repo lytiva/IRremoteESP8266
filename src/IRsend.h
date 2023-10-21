@@ -115,9 +115,9 @@ struct state_t {
   decode_type_t protocol = decode_type_t::UNKNOWN;
   int16_t model = -1;  // `-1` means unused.
   bool power = false;
+  bool celsius = true;
   stdAc::opmode_t mode = stdAc::opmode_t::kOff;
   float degrees = 25;
-  bool celsius = true;
   stdAc::fanspeed_t fanspeed = stdAc::fanspeed_t::kAuto;
   stdAc::swingv_t swingv = stdAc::swingv_t::kOff;
   stdAc::swingh_t swingh = stdAc::swingh_t::kOff;
@@ -128,10 +128,10 @@ struct state_t {
   bool filter = false;
   bool clean = false;
   bool beep = false;
+  bool iFeel = false;
   int16_t sleep = -1;  // `-1` means off.
   int16_t clock = -1;  // `-1` means not set.
   stdAc::ac_command_t command = stdAc::ac_command_t::kControlCommand;
-  bool iFeel = false;
   float sensorTemperature = kNoTempValue;  // `kNoTempValue` means not set.
 };
 };  // namespace stdAc
